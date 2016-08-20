@@ -3059,8 +3059,8 @@ class Player extends Human implements CommandSender, InventoryHolder, ChunkLoade
 				}
 
 				if($packet->action === InteractPacket::ACTION_RIGHT_CLICK){
-					if($target instanceof Animal){
-						$target->rightClickOn($this->inventory->getItemInHand());
+					if($target instanceof Living){
+						$target->useItemOn($this->inventory->getItemInHand());
 					}
 					break;
 				}
