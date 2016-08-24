@@ -36,7 +36,7 @@ class XPOrb extends Entity{
 	
 	protected $experience = 0;
 
-	public function initEntity(){
+	protected function initEntity(){
 		parent::initEntity();
 		if(isset($this->namedtag->Experience)){
 			$this->experience = $this->namedtag["Experience"];
